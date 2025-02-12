@@ -1,6 +1,13 @@
 import Styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
+
+ type CategoryBadgeProps ={
+  color: string;
+}
+
+
+
 export const HeaderContent = Styled.header`
 display: flex; 
 justify-content:space-between; 
@@ -129,3 +136,25 @@ overflow-x: hidden;
   border-radius: 4px;
 }
 `
+
+export const CategoryBadge = Styled.span<CategoryBadgeProps>`
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.750rem;
+border: 1px solid ${props => props.color};
+color: ${props => props.color};
+cursor: pointer;
+font-weight: 500;
+padding: 0.300rem;
+gap: 0.25rem;
+border-radius: 0.25rem;
+
+svg{
+  fill: ${theme.colors.error};
+  width: 0.80rem;
+  height: 0.80rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+`;

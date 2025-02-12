@@ -49,11 +49,23 @@ export type Expense = {
 }
 
 export type DashBoard = {
+  expenses: Expense[] | undefined;
   balance: Balance;
-  expense: Expense;
+  expense: Expense[];
 }
 
 export type DashBoardFilter = {
   beginDate: string 
   endDate: string
+}
+
+export type FinantialEvolutionFilter = {
+  year: string
+}
+
+export type FinantialEvolution = {
+  _id: [number, number];
+  incomes: number;
+  expenses: number;
+  balance: number;
 }

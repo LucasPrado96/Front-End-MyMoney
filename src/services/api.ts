@@ -1,5 +1,6 @@
 import axios from "axios";
-import {createCategoryType,  Category, createTransactionType, Transaction, TransactionsFilter, DashBoard, DashBoardFilter,  } from './types'
+import {createCategoryType,  Category, createTransactionType, Transaction, TransactionsFilter, DashBoard, DashBoardFilter, FinantialEvolutionFilter, FinantialEvolution,  } from './types'
+
 
 export class APIService {
 private static client = axios.create({
@@ -12,9 +13,12 @@ static async getDashBoard({beginDate, endDate}: DashBoardFilter): Promise<DashBo
         params: {
             beginDate,
             endDate,
+            
+            
+            
         },
     })
-    
+
     return data
 }
 
@@ -50,6 +54,16 @@ static async getTransactions({title, categoryId, endDate, beginDate}: Transactio
         },
     })
 
+    return data
+}
+
+
+static async getFinantialEvolutinon({year}: FinantialEvolutionFilter): Promise<FinantialEvolution[]> {
+    const {data} = await APIService.client.get<FinantialEvolution[]>('/transactions/finantial-evolution', {
+        params: {
+            year,
+        },
+    })
     return data
 }
 
