@@ -56,17 +56,6 @@
 
 ---
 
-<h2>📂 Estrutura do Projeto</h2>
-<pre>
-<code>
-mymoney/
-├── backend/    # API em Node.js com Express e MongoDB (Dockerizado)
-└── frontend/   # Interface em React com Vite
-</code>
-</pre>
-
----
-
 <h2>🚀 Como Rodar o Projeto</h2>
 
 <h3>Pré-requisitos</h3>
