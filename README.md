@@ -46,4 +46,9 @@
       <li>Aggregation Framework do MongoDB para consultas avançadas</li>
     </ul>
   </li>
+  <li><strong>Containerização:</strong>
+    <ul>
+      <li>Docker para criar ambientes consistentes e escaláveis</li>
+    </ul>
+  </li>
 </ul>
